@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<header>
+    <div><a href="/">
+            <h1>Orai Lietuvoje</h1>
+        </a></div>
+    <nav>
+        <a href="/">Pradinis puslapis</a>
+        <a href="/miestai">Miestai</a>
+        <a href="/miestai/pasirinkti">Pasirinkti miestai</a>
+    </nav>
+</header>
+
+
+    <h1 style="text-align: center;"><%= savivaldybe %></h1>
+    <div class="cities">
+        <% miestai.forEach(city => { %>
+        <div>
+            <a href="/miestas/<%= city.code %>"><%= city.name %></a>
+        </div>
+        <% }) %>
+    </div>
+    <footer>Poraštė</footer>
+</body>
+
+</html>

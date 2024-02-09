@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div><a href="/">
+                <h1>Orai Lietuvoje</h1>
+            </a></div>
+        <nav>
+            <a href="/">Pradinis puslapis</a>
+            <a href="/miestai">Miestai</a>
+            <a href="/miestai/pasirinkti">Pasirinkti miestai</a>
+        </nav>
+    </header>
+
+    <h1><%= miestas.place.name %></h1>
+
+    <% miestas.forecastTimestamps.forEach(city => { %>
+                    <div class="lentele">
+                        <p>Laikas <%= city.forecastTimeUtc  %></p>
+                        <p>Temperatūra: <%= city.airTemperature %>°C</p>
+                        <p>Jaučiasi: <%= city.feelsLikeTemperature %>°C</p>
+                        <p>Vėjo greitis: <%= city.windspeed %>°m/s</p>
+                        <p>Vėjo kryptis: <%= city.windDirection %>°</p>
+                        <p>Vėjo gūsis <%= city.windGust %>m/s</p>
+                        <p>Debesuotumas <%= city.cloudCover %></p>
+                        <p>Slegis juros lygije <%= city.seaLevelPressure %>hPa</p>
+                        <p>Oro dregnumas <%= city.relativeHumidity %>%</p>
+                        <p>Krituliu kiekis <%= city.totalPrecipitation %> mm</p>
+                        <p><%= city.conditionCode %></p>
+                    </div>
+    <% }) %>
+    <footer>Poraštė</footer>
+</body>
+</html>

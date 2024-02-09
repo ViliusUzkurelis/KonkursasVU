@@ -1,0 +1,91 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  background-color: #00B7FF;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+}
+nav {
+  color: black;
+}
+nav a {
+  border: 1px solid;
+  padding: 3px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header h1 {
+  border: 1px solid;
+  padding: 10px;
+  text-align: center;
+}
+article {
+  background-color: transparent;
+}
+article h1 {
+  text-align: center;
+}
+article .miestai{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+article .miestai .vilnius {
+  background-image: url(https://cityofmercy.lt/wp-content/uploads/2017/12/Vilnius_skaidre2.jpg);
+}
+article .miestai .kaunas {
+  background-image: url(https://api.delfi.lt/media-api-image-cropper/v1/b4423050-7d6c-11ed-a027-29ed55e34c8c.jpg?noup&w=1200&h=711&fx=0.5&fy=0.25);
+}
+article .miestai .klaipeda {
+  background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/db/5a/7a/klaipeda-old-city.jpg?w=1200&h=1200&s=1);
+}
+article .miestai .miestas {
+  border: 1px solid;
+  height: 400px;
+  width: 400px;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(70%);
+  padding: 20px;
+  
+}
+article .miestai .miestas .contents {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+}
+.cities div {
+  padding: 10px;
+}
+.cities a{
+  border: 1px solid;
+  padding: 5px;
+}
+.lentele {
+  border: 1px solid;
+}
+footer {
+  background-color: #00B7FF;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}

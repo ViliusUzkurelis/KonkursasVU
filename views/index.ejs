@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div><a href="/">
+                <h1>Orai Lietuvoje</h1>
+            </a></div>
+        <nav>
+            <a href="/">Pradinis puslapis</a>
+            <a href="/miestai">Miestai</a>
+            <a href="/miestai/pasirinkti">Pasirinkti miestai</a>
+        </nav>
+    </header>
+    <main>
+       <article>
+            <h1>Miestai</h1>
+            <div class="miestai">
+                <div class="miestas vilnius">
+                    <div class="contents">
+                        <h1>Vilnius</h1>
+                        <p>Temperatūra: <%= vilnius.forecastTimestamps[0].airTemperature %>°C</p>
+                        <p>Jaučiasi: <%= vilnius.forecastTimestamps[0].feelsLikeTemperature %>°C</p>
+                        <p>Vėjo greitis: <%= vilnius.forecastTimestamps[0].windspeed %>°m/s</p>
+                        <p>Vėjo kryptis: <%= vilnius.forecastTimestamps[0].windDirection %>°</p>
+                        <p><%= vilnius.forecastTimestamps[0].conditionCode %></p>
+                    </div>
+                </div>
+                <div class="miestas kaunas">
+                    <div class="contents">
+                        <h1>Kaunas</h1>
+                        <p>Temperatūra: <%= kaunas.forecastTimestamps[0].airTemperature %>°C</p>
+                        <p>Jaučiasi: <%= kaunas.forecastTimestamps[0].feelsLikeTemperature %>°C</p>
+                        <p>Vėjo greitis: <%= kaunas.forecastTimestamps[0].windspeed %>°m/s</p>
+                        <p>Vėjo kryptis: <%= kaunas.forecastTimestamps[0].windDirection %>°</p>
+                        <p><%= kaunas.forecastTimestamps[0].conditionCode %></p>
+                    </div>
+                </div>
+                <div class="miestas klaipeda">
+                    <div class="contents">
+                        <h1>Klaipeda</h1>
+                        <p>Temperatūra: <%= klaipeda.forecastTimestamps[0].airTemperature %>°C</p>
+                        <p>Jaučiasi: <%= klaipeda.forecastTimestamps[0].feelsLikeTemperature %>°C</p>
+                        <p>Vėjo greitis: <%= klaipeda.forecastTimestamps[0].windspeed %>°m/s</p>
+                        <p>Vėjo kryptis: <%= klaipeda.forecastTimestamps[0].windDirection %>°</p>
+                        <p><%= klaipeda.forecastTimestamps[0].conditionCode %></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>Poraštė</footer>
+</body>
+
+</html>
